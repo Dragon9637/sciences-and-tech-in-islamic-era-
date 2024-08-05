@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مجال الرياضيات</title>
+    <style>
+        /* إعدادات أساسية */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #fff;
+            background: url(pics/mathmatic.jfif) no-repeat center center fixed; /* خلفية فضاء خارجي */
+            background-size: cover;
+            text-align: right; /* محاذاة النصوص لليمين */
+            overflow-x: hidden; /* منع التمرير الأفقي */
+        }
+
+        /* تنسيق الرأس */
+        header {
+            background: rgba(50, 30, 10, 0.8); /* خلفية بنية داكنة */
+            padding: 20px;
+            border-bottom: 4px solid #8B4513; /* لون بني داكن */
+            text-align: center; /* محاذاة النصوص في الرأس للوسط */
+            position: relative;
+            z-index: 1;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* إضافة ظل خفيف للرأس */
+        }
+
+        header h1 {
+            margin: 0;
+            color: #F5DEB3; /* لون بني فاتح */
+            font-size: 2.5em;
+            font-family: 'Georgia', serif; /* خط أنيق للعناوين */
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); /* إضافة ظل للنص */
+            display: inline-block; /* حتى يتمكن الزر من الانتقال إلى الجانب */
+        }
+
+        /* زر العودة */
+        .back-button {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background: rgba(100, 60, 20, 0.8); /* خلفية بنية داكنة */
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            color: #F5DEB3; /* لون بني فاتح */
+            font-size: 1.2em;
+            transition: background-color 0.3s ease;
+        }
+
+        .back-button:hover {
+            background-color: rgba(100, 60, 20, 0.6); /* تظليل عند التحويم */
+        }
+
+        /* تنسيق القسم الرئيسي */
+        main {
+            padding: 20px;
+            max-width: 900px;
+            margin: 20px auto;
+            background: rgba(50, 30, 10, 0.8); /* خلفية بنية داكنة للصندوق */
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* إضافة ظل خفيف للصندوق */
+            padding-top: 20px; /* إضافة مسافة قبل أول اسم */
+            direction: rtl; /* محاذاة النصوص لليمين */
+        }
+
+        /* تنسيق قائمة العلماء */
+        .scientists-list {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px; /* مسافة بين العناصر */
+            direction: rtl; /* محاذاة العناصر لليمين */
+            justify-content: center; /* محاذاة العناصر للوسط */
+        }
+
+        .scientist {
+            background: rgba(80, 40, 10, 0.9); /* خلفية بنية داكنة لكل عنصر */
+            padding: 20px;
+            border-radius: 10px;
+            width: 300px; /* عرض ثابت */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* إضافة ظل خفيف */
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer; /* تغيير المؤشر عند التحويم */
+        }
+
+        .scientist:hover {
+            transform: translateY(-5px); /* تحريك المربع قليلاً لأعلى */
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); /* تغيير الظل عند التحويم */
+        }
+
+        .scientist h2 {
+            margin: 0;
+            color: #F5DEB3; /* لون بني فاتح */
+            font-size: 1.8em;
+            font-family: 'Georgia', serif; /* خط أنيق للعناوين */
+        }
+
+        .scientist p {
+            margin: 10px 0 0;
+            color: #D2B48C; /* لون بني فاتح جداً */
+            font-size: 1.2em;
+        }
+
+        /* تنسيق التذييل */
+        footer {
+            background: rgba(50, 30, 10, 0.8); /* خلفية بنية داكنة */
+            padding: 10px;
+            text-align: center; /* محاذاة النصوص في التذييل */
+            border-top: 4px solid #8B4513; /* لون بني داكن */
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.5); /* إضافة ظل خفيف للتذييل */
+        }
+
+        footer p {
+            margin: 0;
+            color: #F5DEB3; /* لون بني فاتح */
+            font-size: 1.2em;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="andalusian-scientists.html" class="back-button">العودة إلى الصفحة الرئيسية</a>
+        <h1>مجال الرياضيات</h1>
+    </header>
+    <main>
+        <ul class="scientists-list">
+            <li class="scientist">
+                <h2>الخوارزمي</h2>
+                <p>الخوارزمي، عالم رياضيات فارسي من القرن التاسع، يعتبر مؤسس علم الجبر وأحد الأوائل في تطوير الأرقام العربية.</p>
+            </li>
+            <li class="scientist">
+                <h2>ابن الهيثم</h2>
+                <p>ابن الهيثم، عالم عربي من القرون الوسطى، قدم إسهامات كبيرة في علم البصريات والرياضيات، واشتهر بأبحاثه في الميكانيكا والبصريات.</p>
+            </li>
+            <li class="scientist">
+                <h2>البتاني</h2>
+                <p>البتاني، عالم رياضيات وفلك عربي من القرون الوسطى، قدم إسهامات هامة في الحساب والفلك وصحح العديد من الأخطاء الفلكية.</p>
+            </li>
+            <li class="scientist">
+                <h2>الطوسي</h2>
+                <p>الطوسي، عالم رياضيات وفلك من القرن الثالث عشر، قدم إسهامات في الجبر والمثلثات والفيزياء الفلكية.</p>
+            </li>
+            <li class="scientist">
+                <h2>ابن يونس</h2>
+                <p>ابن يونس، عالم رياضيات وفلك من القرون الوسطى، كتب العديد من الكتب حول الرياضيات والفلك وقدم إسهامات مهمة في علم المثلثات.</p>
+            </li>
+        </ul>
+    </main>
+    <footer>
+        <p>&copy; 2024 العلوم و المعارف عبر عصور الحضارة الإسلامية. جميع الحقوق محفوظة.</p>
+    </footer>
+</body>
+</html>

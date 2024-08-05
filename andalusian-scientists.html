@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مجالات العلم</title>
+    <style>
+        /* إعدادات أساسية */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #fff;
+            background: url(pics/scince.jfif) no-repeat center center fixed; /* خلفية فضاء خارجي */
+            background-size: cover;
+            text-align: right; /* محاذاة النصوص لليمين */
+            overflow-x: hidden; /* منع التمرير الأفقي */
+        }
+
+        /* تنسيق الرأس */
+        header {
+            background: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            border-bottom: 4px solid #007acc; /* لون أزرق */
+            text-align: center; /* محاذاة النصوص في الرأس للوسط */
+            position: relative;
+            z-index: 1;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* إضافة ظل خفيف للرأس */
+        }
+
+        header h1 {
+            margin: 0;
+            color: #00bfff; /* لون أزرق فاتح */
+            font-size: 2.5em;
+            font-family: 'Georgia', serif; /* خط أنيق للعناوين */
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); /* إضافة ظل للنص */
+            display: inline-block; /* حتى يتمكن الزر من الانتقال إلى الجانب */
+        }
+
+        /* زر العودة */
+        .back-button {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background: rgba(0, 0, 0, 0.7);
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            color: #fff;
+            font-size: 1.2em;
+            transition: background-color 0.3s ease;
+        }
+
+        .back-button:hover {
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        /* تنسيق القسم الرئيسي */
+        main {
+            padding: 20px;
+            max-width: 900px;
+            margin: 20px auto;
+            background: rgba(0, 0, 0, 0.7); /* خلفية داكنة للصندوق */
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* إضافة ظل خفيف للصندوق */
+            padding-top: 20px; /* إضافة مسافة قبل أول اسم */
+            display: flex;
+            justify-content: space-between; /* توزيع العناصر على اليمين واليسار */
+        }
+
+        /* مربع اختيار المجال */
+        .choose-field {
+            background: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            margin-right: 20px; /* مسافة من اليمين */
+            border-radius: 2px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* إضافة ظل خفيف */
+            text-align: center; /* محاذاة النصوص للوسط */
+            width: 200px; /* عرض ثابت */
+        }
+
+        .choose-field p {
+            margin: 0;
+            color: #fff;
+            font-size: 1.2em;
+        }
+
+        /* تنسيق قائمة المجالات */
+        .fields-list {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            width: calc(100% - 240px); /* عرض القائمة */
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+        }
+
+        .field {
+            background: rgba(0, 0, 0, 0.5); /* خلفية داكنة لكل عنصر */
+            padding: 20px; /* زيادة الحشو */
+            margin-bottom: 20px; /* زيادة المسافة بين العناصر */
+            border-radius: 10px;
+            border-left: 5px solid #007acc; /* شريط أزرق على الجانب */
+            width: calc(40% - 10px); /* تعديل العرض مع فراغ بين العناصر */
+            margin-left: auto; /* إرجاع العناصر إلى الموضع الأصلي على اليمين */
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer; /* تغيير المؤشر عند التحويم */
+        }
+
+        .field:hover {
+            transform: translateY(-5px); /* تحريك المربع قليلاً لأعلى */
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* تغيير الظل عند التحويم */
+        }
+
+        .field h2 {
+            margin: 0;
+            color: #00bfff; /* لون أزرق فاتح */
+            font-size: 1.5em; /* زيادة حجم العنوان */
+            font-family: 'Georgia', serif; /* خط أنيق للعناوين */
+        }
+
+        .field p {
+            margin: 10px 0 0;
+            color: #dcdcdc; /* لون نص خفيف */
+            font-size: 1em; /* زيادة حجم النص */
+        }
+
+        /* تنسيق التذييل */
+        footer {
+            background: rgba(0, 0, 0, 0.7);
+            padding: 10px;
+            text-align: center; /* محاذاة النصوص لليمين في التذييل */
+            border-top: 4px solid #007acc; /* لون أزرق */
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.5); /* إضافة ظل خفيف للتذييل */
+        }
+
+        footer p {
+            margin: 0;
+            color: #00bfff; /* لون أزرق فاتح */
+            font-size: 1.2em; /* زيادة حجم النص */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="home.html" class="back-button">العودة إلى الصفحة الرئيسية</a>
+        <h1>مجالات العلم</h1>
+    </header>
+    <main>
+        <div class="choose-field">
+            <p>اختر المجال الذي تريد أن تعرف علماء العرب الذين تفوقوا فيه</p>
+        </div>
+        <ul class="fields-list">
+            <li class="field" onclick="location.href='phisic.html';" style="cursor: pointer;">
+                <h2>الفيزياء</h2>
+                <p>دراسة الطبيعة والخواص الأساسية للمادة والطاقة.</p>
+            </li>
+            <li class="field" onclick="location.href='chamistry.html';" style="cursor: pointer;">
+                <h2>الكيمياء</h2>
+                <p>دراسة التركيب والخواص والتفاعلات الكيميائية.</p>
+            </li>
+            <li class="field" onclick="location.href='math.html';" style="cursor: pointer;">
+                <h2>الرياضيات</h2>
+                <p>دراسة الأشكال، الأرقام، والعلاقات الكمية.</p>
+            </li>
+            <li class="field" onclick="location.href='taib.html';" style="cursor: pointer;">
+                <h2>الطب</h2>
+                <p>العلم الذي يدرس الصحة، الأمراض، والعلاجات.</p>
+            </li>
+            <li class="field" onclick="location.href='astronomy.html';" style="cursor: pointer;">
+                <h2>الفلك</h2>
+                <p>علم دراسة الأجرام السماوية وحركتها وخصائصها.</p>
+            </li>
+        </ul>
+    </main>
+    <footer>
+        <p>&copy; 2024 العلوم و المعارف عبر عصور الحضارة الإسلامية. جميع الحقوق محفوظة.</p>
+    </footer>
+</body>
+</html>

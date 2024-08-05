@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>علماء الطب</title>
+    <style>
+        /* إعدادات أساسية */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            background: url(pics/طب.jfif) no-repeat center center fixed; /* خلفية فضاء خارجي */
+            background-size: cover;
+            text-align: right; /* محاذاة النصوص لليمين */
+            overflow-x: hidden; /* منع التمرير الأفقي */
+        }
+
+        /* تنسيق الرأس */
+        header {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            border-bottom: 4px solid #00aaff; /* لون أزرق فاتح */
+            text-align: center; /* محاذاة النصوص في الرأس للوسط */
+            position: relative;
+            z-index: 1;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* إضافة ظل خفيف للرأس */
+        }
+
+        header h1 {
+            margin: 0;
+            color: #00aaff; /* لون أزرق فاتح */
+            font-size: 2.5em;
+            font-family: 'Georgia', serif; /* خط أنيق للعناوين */
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3); /* إضافة ظل للنص */
+            display: inline-block; /* حتى يتمكن الزر من الانتقال إلى الجانب */
+        }
+
+        /* زر العودة */
+        .back-button {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background: #00aaff; /* لون أزرق فاتح */
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            color: #fff;
+            font-size: 1.2em;
+            transition: background-color 0.3s ease;
+        }
+
+        .back-button:hover {
+            background-color: #0088cc; /* لون أزرق أغمق */
+        }
+
+        /* تنسيق القسم الرئيسي */
+        main {
+            padding: 20px;
+            max-width: 900px;
+            margin: 20px auto;
+            background: rgba(255, 255, 255, 0.9); /* خلفية فاتحة للصندوق */
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* إضافة ظل خفيف للصندوق */
+        }
+
+        /* تنسيق قائمة العلماء في الطب */
+        .scientists-list {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .scientist {
+            background: #f5f5f5; /* خلفية فاتحة */
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* إضافة ظل خفيف */
+        }
+
+        .scientist h2 {
+            margin: 0;
+            color: #00aaff; /* لون أزرق فاتح */
+            font-size: 1.8em; /* زيادة حجم العنوان */
+            font-family: 'Georgia', serif; /* خط أنيق للعناوين */
+        }
+
+        .scientist p {
+            margin: 10px 0 0;
+            color: #333; /* لون نص داكن */
+            font-size: 1.2em; /* زيادة حجم النص */
+        }
+
+        /* تنسيق التذييل */
+        footer {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 10px;
+            text-align: center; /* محاذاة النصوص لليمين في التذييل */
+            border-top: 4px solid #00aaff; /* لون أزرق فاتح */
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.1); /* إضافة ظل خفيف للتذييل */
+        }
+
+        footer p {
+            margin: 0;
+            color: #00aaff; /* لون أزرق فاتح */
+            font-size: 1.2em; /* زيادة حجم النص */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="andalusian-scientists.html" class="back-button">العودة إلى الصفحة الرئيسية</a>
+        <h1>علماء الطب</h1>
+    </header>
+    <main>
+        <ul class="scientists-list">
+            <li class="scientist">
+                <h2ابن سينا</h2>
+                <p>ابن سينا، المعروف أيضًا بـ "الشيخ الرئيس"، كان طبيبًا وفيلسوفًا فارسيًا. كتب العديد من الأعمال الطبية والفلسفية، ومن أشهر أعماله "القانون في الطب"، الذي أثرى الطب الغربي والشرقي.</p>
+            </li>
+            <li class="scientist">
+                <h2الرازي</h2>
+                <p>الرازي، المعروف بـ "الرازى"، كان عالمًا وطبيبًا فارسيًا. كتب العديد من الكتب في الطب مثل "الحاوي" و"المنصوري"، وكان رائدًا في تطوير طرق التشخيص والعلاج.</p>
+            </li>
+            <li class="scientist">
+                <h2الزهراوي</h2>
+                <p>الزهراوي، المعروف بـ "أبو القاسم الزهراوي"، كان طبيبًا وجراحًا أندلسيًا. اشتهر بكتابه "التصريف لمن عجز عن التأليف"، الذي اعتبر مرجعًا رئيسيًا في الجراحة.</p>
+            </li>
+            <li class="scientist">
+                <h2ابن النفيس</h2>
+                <p>ابن النفيس كان طبيبًا سوريًا، وهو مكتشف الدورة الدموية الصغرى. كتب العديد من الأعمال الطبية التي أثرت بشكل كبير في الطب الإسلامي والطب الغربي.</p>
+            </li>
+            <li class="scientist">
+                <h2الحسن بن الهيثم</h2>
+                <p>الحسن بن الهيثم كان عالمًا في البصريات والفيزياء، ولكن له إسهامات أيضًا في الطب وعلم التشريح. عمله في تحسين فهم عملية الإبصار كان له تأثير كبير على الطب والعلم.</p>
+            </li>
+        </ul>
+    </main>
+    <footer>
+        <p>&copy; 2024 العلوم و المعارف عبر عصور الحضارة الإسلامية. جميع الحقوق محفوظة.</p>
+    </footer>
+</body>
+</html>

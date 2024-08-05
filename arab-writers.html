@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>أدباء وفلاسفة العرب القدماء</title>
+    <style>
+        /* Basic reset and styles */
+        body {
+            font-family: 'Amiri', serif; /* Arabic font style */
+            background-color: #f7f3e9; /* Light beige background */
+            margin: 0;
+            padding: 0;
+            text-align: right; /* Right-aligned text for the entire page */
+        }
+
+        body::before {
+            content: "";
+            position: fixed; /* اجعل الخلفية ثابتة */
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url(pics/phal2.jfif); /* صورة خلفية زخرفية أندلسية */
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed; /* اجعل الخلفية ثابتة أثناء التمرير */
+            z-index: -1;
+            opacity: 0.9; /* زيادة وضوح الخلفية */
+        }
+
+        header {
+            background-color: #3d2c21; /* Dark brown header background */
+            color: #f7f3e9; /* Light beige text color */
+            padding: 10px;
+            margin-bottom: 20px;
+            text-align: center; /* تحديد محاذاة النص إلى الوسط للعنوان */
+        }
+
+        h1 {
+            font-size: 2.5em;
+            margin: 0;
+            font-family: 'Scheherazade', serif; /* Stylish Arabic font for header */
+            text-shadow: 1px 1px 1px #000;
+        }
+
+        main {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff; /* White main content background */
+            border: 2px solid #3d2c21; /* Dark brown border */
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Light shadow */
+            text-align: right; /* Right-aligned text */
+            direction: rtl; /* Right-to-left direction for content */
+        }
+
+        .writer {
+            margin-bottom: 20px;
+            padding: 15px;
+            background-color: #f2e9e1; /* Light brown background for each writer */
+            border-radius: 8px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); /* Light shadow */
+            display: flex;
+            align-items: center; /* Center items vertically */
+        }
+
+        .writer h2 {
+            font-size: 1.8em;
+            color: #3d2c21; /* Dark brown text color */
+            margin-bottom: 10px;
+            text-align: right; /* Right-align the heading */
+        }
+
+        .writer p {
+            font-size: 1.2em;
+            line-height: 1.6;
+            color: #63564b; /* Brownish text color */
+            flex: 1;
+            text-align: right; /* Right-align text */
+        }
+
+        .writer img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%; /* Rounded image */
+            margin-left: 20px; /* Space between image and text */
+            border: 4px solid #3d2c21; /* Dark brown border for image */
+            box-shadow: 0 0 8px rgba(0, 0, 0, 0.2); /* Light shadow */
+        }
+
+        footer {
+            background-color: #3d2c21; /* Dark brown footer background */
+            color: #f7f3e9; /* Light beige text color */
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            text-align: center; /* Center-align text in footer */
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+        .return-box {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            padding: 10px 15px;
+            background-color: #6e3f28;
+            color: white;
+            border-radius: 5px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+            z-index: 999;
+        }
+
+        .return-box:hover {
+            background-color: #512b1b;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>أدباء وفلاسفة العرب القدماء</h1>
+        <a href="home.html" class="return-box">العودة إلى الصفحة الرئيسية</a>
+    </header>
+    <main>
+        <div class="writer">
+            <img src="pics/الشعراء/المتنبي.jfif" alt="أبو الطيب المتنبي">
+            
+            <div>
+                <h2>أبو الطيب المتنبي</h2>
+                <p>شاعر عربي من العصر العباسي، أحد أعظم شعراء العربية.</p>
+                <a href="https://www.youtube.com/watch?v=LXZpZUeYA6E" target="_blank">مشاهدة فيديو</a>
+            </div>
+        </div>
+        <div class="writer">
+            <img src="pics/الشعراء/بن حيان.jfif" alt="أبو حيان الطوسي">
+            <div>
+                <h2>أبو حيان الطوسي</h2>
+                <p>عالم فلك وجغرافي ورياضياتي عربي من العصر الأندلسي.</p>
+            </div>
+        </div>
+        <div class="writer">
+            <img src="pics/الشعراء/ابن خلدون.jfif" alt="ابن خلدون">
+            <div>
+                <h2>ابن خلدون</h2>
+                <p>مؤسس علم الاجتماع والتاريخ الشهير، ولد في القرن الرابع عشر.</p>
+            </div>
+        </div>
+        <div class="writer">
+            <img src="pics/الشعراء/الجاحظ.jfif" alt="الجاحظ">
+            <div>
+                <h2>الجاحظ</h2>
+                <p>أديب ونقاد وزاهد إسلامي عربي، أحد أهم الأدباء في العصر العباسي.</p>
+            </div>
+        </div>
+        <div class="writer">
+            <img src="pics/الشعراء/العري.jfif" alt="أبو العلاء المعري">
+            <div>
+                <h2>أبو العلاء المعري</h2>
+                <p>شاعر عربي من العصر العباسي، معروف بشعره الواعظ والمتأمل.</p>
+            </div>
+        </div>
+        <div class="writer">
+            <img src="pics/الشعراء/الخوارزمي.jfif" alt="الخوارزمي">
+            <div>
+                <h2>الخوارزمي</h2>
+                <p>عالم رياضيات وفلك وجغرافيا عربي من العصر العباسي، ولد في خوارزم.</p>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2024 العلوم و المعارف عبر عصور الحضارة الإسلامية. جميع الحقوق محفوظة.</p>
+    </footer>
+</body>
+</html>

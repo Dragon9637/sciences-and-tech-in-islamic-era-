@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>أشهر الرحالة العرب</title>
+    <style>
+        /* إعدادات أساسية */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            background-color: #f4f4f4;
+            text-align: right; /* محاذاة النصوص لليمين */
+            overflow-x: hidden; /* منع التمرير الأفقي */
+        }
+
+        /* تصميم الخلفية */
+        body::before {
+            content: "";
+            position: fixed; /* اجعل الخلفية ثابتة */
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url(pics/rahal.png); /* صورة خلفية زخرفية أندلسية */
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed; /* اجعل الخلفية ثابتة أثناء التمرير */
+            z-index: -1;
+            opacity: 0.9; /* زيادة وضوح الخلفية */
+        }
+
+        /* تنسيق الرأس */
+        header {
+            background: #fff;
+            padding: 30px;
+            border-bottom: 4px solid #6e3f28; /* لون أندلسي دافئ */
+            text-align: center; /* محاذاة النصوص في الرأس للوسط */
+            position: relative;
+            z-index: 1;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* إضافة ظل خفيف للرأس */
+        }
+
+        header h1 {
+            margin: 0;
+            color: #6e3f28;
+            font-size: 3em;
+            font-family: 'Georgia', serif; /* خط أنيق للعناوين */
+            text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.1); /* إضافة ظل للنص */
+        }
+
+        /* تنسيق القسم الرئيسي */
+        main {
+            padding: 30px;
+            max-width: 900px;
+            margin: 30px auto;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 15px;
+            text-align: right; /* محاذاة النصوص لليمين في المحتوى الرئيسي */
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1); /* إضافة ظل خفيف للصندوق */
+        }
+
+        main h2 {
+            color: #6e3f28;
+            font-size: 2em;
+            border-bottom: 3px solid #d4af37; /* لون ذهبي للعناوين */
+            padding-bottom: 10px;
+            font-family: 'Georgia', serif; /* خط أنيق للعناوين */
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); /* إضافة ظل للنص */
+            margin-top: 40px; /* زيادة المسافة بين العناوين */
+            margin-bottom: 10px; /* تقليل المسافة السفلية */
+        }
+
+        main p {
+            margin: 15px 0;
+            line-height: 1.8;
+            font-size: 1.2em; /* زيادة حجم الخط */
+        }
+
+        /* تنسيق التذييل */
+        footer {
+            background: #fff;
+            padding: 10px;
+            text-align: center; /* محاذاة النصوص لليمين في التذييل */
+            border-top: 4px solid #6e3f28;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.1); /* إضافة ظل خفيف للتذييل */
+        }
+
+        footer p {
+            margin: 0;
+            color: #6e3f28;
+        }
+
+        .header {
+            position: relative;
+            padding: 20px;
+        }
+
+        /* مربع العودة */
+        .return-box {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            padding: 10px 15px;
+            background-color: #6e3f28;
+            color: white;
+            border-radius: 5px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+            z-index: 999;
+            
+        }
+
+        .return-box:hover {
+            background-color: #512b1b;
+        }
+        
+
+        /* تنسيق المربعات */
+        .explorer-box {
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            display: flex;
+            align-items: center;
+        }
+
+        .explorer-box img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            margin-right: 20px;
+            border: 4px solid #6e3f28; /* لون أندلسي دافئ للإطار */
+            box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .explorer-info {
+            flex: 1;
+        }
+
+        .explorer-info h2 {
+            color: #6e3f28;
+            font-size: 1.8em;
+            margin-bottom: 10px;
+            font-family: 'Georgia', serif; /* خط أنيق للعناوين */
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); /* إضافة ظل للنص */
+        }
+
+        .explorer-info p {
+            color: #333;
+            font-size: 1.2em;
+            line-height: 1.6;
+        }
+        
+    </style>
+</head>
+<body>
+    <header>
+        <h1>أشهر الرحالة العرب</h1>
+        <a href="home.html" class="return-box">العودة إلى الصفحة الرئيسية</a>
+    </header>
+    <main>
+        <div class="explorer-box">
+            <img src="pics/الرحالة/بطوطة.jpg" alt="ابن بطوطة">
+            <div class="explorer-info">
+                <h2>ابن بطوطة</h2>
+                <p>ابن بطوطة، المولود في المغرب عام 1304م، هو أحد أعظم الرحالة في التاريخ الإسلامي. قام برحلات شاملة شملت شمال أفريقيا، والشرق الأوسط، وآسيا الوسطى، والهند، وجنوب شرق آسيا، والصين. تجاربه وثّقها في كتابه "تحفة النظار في غرائب الأمصار وعجائب الأسفار"، الذي يعد مرجعاً مهماً في تاريخ الرحلات.</p>
+                <a href="https://www.youtube.com/watch?v=A011ID6GWHQ" target="_blank" class="videos">مشاهدة فيديو</a>
+            </div>
+        </div>
+
+        <div class="explorer-box">
+            <img src="pics/الرحالة/جبير.jpg" alt="ابن جبير">
+            <div class="explorer-info">
+                <h2>ابن جبير </h2>
+                <p>ابن جبير، من الأندلس، عاش في القرن الثاني عشر الميلادي. قام برحلة حج إلى مكة المكرمة ومر عبر فلسطين ومصر. كتب عن تجربته في كتاب "رحلة ابن جبير"، الذي يعتبر أحد أهم المصادر التاريخية والجغرافية عن عصره.</p>
+                <a href="https://www.youtube.com/watch?v=dsz9K01ojG8" target="_blank">مشاهدة فيديو</a>
+            </div>
+        </div>
+
+        <div class="explorer-box">
+            <img src="pics/الرحالة/فضلان.png" alt="ابن فضلان">
+            <div class="explorer-info">
+                <h2>ابن فضلان</h2>
+                <p>ابن فضلان، الدبوسي، عاش في القرن الرابع الهجري. قام برحلة إلى شرق أوروبا ووصف تجربته في كتابه "رسالة ابن فضلان"، الذي يعد مصدراً هاماً لدراسة التاريخ والجغرافيا في ذلك العصر.</p>
+                <a href="https://www.youtube.com/watch?v=ycONuED8WNM" target="_blank">مشاهدة فيديو</a>
+            </div>
+        </div>
+
+        <div class="explorer-box">
+            <img src="pics/الرحالة/الادريسي.jpg" alt="الإدريسي">
+            <div class="explorer-info">
+                <h2>الإدريسي</h2>
+                <p>أبو عبد الله محمد بن عبد الله الإدريسي، من المغرب، عاش في القرن الثاني عشر الميلادي. كان جغرافياً وكتب عن أعماله في كتابه "نزهة المشتاق في أخبار الأفاق"، وهو من أهم المراجع الجغرافية في العصور الوسطى.</p>
+                <a href="https://www.youtube.com/watch?v=nCAoz5JcgdQ" target="_blank">مشاهدة فيديو</a>
+            </div>
+        </div>
+
+        <div class="explorer-box">
+            <img src="pics/الرحالة/ابن حوقل.jfif" alt="ابن حوقل">
+            <div class="explorer-info">
+                <h2>ابن حوقل</h2>
+                <p>أبو القاسم محمد بن حوقل النحوي، من بغداد، عاش في القرن الرابع الهجري. سافر إلى معظم الأنحاء المعروفة في عصره ووثق تجاربه في كتابه "كتاب صفة البلدان"، الذي يعد أحد أهم المصادر التاريخية والجغرافية في العصور الإسلامية.</p>
+                <a href="https://www.youtube.com/watch?v=wuZS4zygEFU" target="_blank">مشاهدة فيديو</a>
+            </div>
+        </div>
+
+        <div class="explorer-box">
+            <img src="pics/الرحالة/المسعودي.png" alt="المسعودي">
+            <div class="explorer-info">
+                <h2>المسعودي</h2>
+                <p>أبو الحسن علي بن الحسين بن علي المسعودي، من بغداد، عاش في القرن العاشر الميلادي. كان مؤرخاً وجغرافياً وعالماً في الأنساب. من أهم أعماله كتاب "مروج الذهب ومعادن الجوهر" الذي يشتمل على معلومات تاريخية وجغرافية شاملة عن العالم الإسلامي والدول المجاورة.</p>
+                <a href="https://www.youtube.com/watch?v=M3NqUtA-sxk" target="_blank">مشاهدة فيديو</a>
+            </div>
+        </div>
+
+        
+    </main>
+    <footer>
+        <p>© 2024 جميع الحقوق محفوظة | تصميم بواسطة [اسمك]</p>
+    </footer>
+</body>
+</html>
